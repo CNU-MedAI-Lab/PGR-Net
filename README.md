@@ -17,34 +17,7 @@ We recommend creating an independent Conda environment:
 ```bash
 conda create -n pgr_net python=3.10 -y
 conda activate pgr_net
-```
-
-Install PyTorch according to your local CUDA version. The following command is only an example for CUDA 12.1:
-
-```bash
-pip install torch torchvision --index-url https://download.pytorch.org/whl/cu121
-```
-
-Install other common dependencies:
-
-```bash
-pip install numpy pandas tqdm scikit-learn scikit-image opencv-python SimpleITK scipy matplotlib joblib thop hausdorff
-```
-
-Notes:
-
-- `hausdorff` is only used for Hausdorff Distance calculation during testing. If it is not installed, the script will skip this metric.
-- `thop` is only used for parameter and FLOPs calculation.
-- If you only run training and testing, auxiliary preprocessing packages such as `nibabel`, `Pillow`, and `imageio` are usually not required.
-
-## Create environment
-
-```bash
-conda create -n pgr_net python=3.10 -y
-conda activate pgr_net
-
-pip install torch torchvision --index-url https://download.pytorch.org/whl/cu121
-pip install numpy pandas tqdm scikit-learn scikit-image opencv-python SimpleITK scipy matplotlib joblib thop hausdorff
+pip install -r requirement.txt
 ```
 
 ## 📁 Repository Structure
