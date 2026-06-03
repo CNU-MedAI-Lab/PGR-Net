@@ -108,7 +108,7 @@ The ROI prior in the current model is built for `160 x 160` images by default. T
 If you use the raw BraTS2023 NIfTI data, please refer to:
 
 ```bash
-python data_processing/cut_MICCAI_for_ordered.py
+python -m data_processing.cut_BraTS.
 ```
 
 ## 🚀 Training
