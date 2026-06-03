@@ -270,30 +270,6 @@ python -m run.train_region_pgr
 Do not run it directly inside the `run/` directory, otherwise relative paths may fail.
 
 
-## Recommended Running Pipeline
-
-```bash
-# 1. Activate environment
-conda activate pgr_net
-
-# 2. Prepare data
-# Modify the input and output paths in the preprocessing script if necessary
-python data_processing/cut_MICCAI_for_ordered.py
-
-# 3. Modify root_path in train/test scripts
-# Make sure it points to the preprocessed dataset directory
-
-# 4. Train or continue training
-mkdir -p checkpoint/pgr
-python run/train_region_pgr.py --Model pgr --epochs 300 --batch-size 24
-
-# 5. Test
-python run/test_region_pgr.py \
-  --Model pgr \
-  --checkpoint checkpoint/pgr/modelbest.pth \
-  --save-images
-```
-
 ## 📄 Citation
 
 If you find this project useful, please consider citing our work:
