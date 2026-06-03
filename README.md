@@ -2,6 +2,12 @@
 
 This repository contains the official PyTorch implementation of **PGR-Net**, a prior-guided ROI reasoning framework for brain tumor MRI segmentation, accepted by the **CVPR 2026 main conference**.
 
+PGR-Net is a prior-guided ROI reasoning network for brain tumor MRI segmentation, accepted by the CVPR 2026 main conference. The method is motivated by the severe spatial sparsity of tumor lesions in brain MRI, where large background regions often dominate feature learning and computation. To address this issue, PGR-Net introduces a data-driven spatial prior set, a hierarchical Top-K ROI decision mechanism, and the WinGS-ROI module to progressively localize high-confidence lesion regions and guide feature learning with ROI-aware spatial information. Built upon a windowed RetNet backbone, PGR-Net achieves accurate and efficient segmentation on BraTS 2019, BraTS 2023, and MSD Task01, while using only 8.64M parameters. 
+
+# Paper link:
+
+https://openaccess.thecvf.com/content/CVPR2026/html/Lu_PGR-Net_Prior-Guided_ROI_Reasoning_Network_for_Brain_Tumor_MRI_Segmentation_CVPR_2026_paper.html
+
 The current main model is `UNetRetNet`, which takes four MRI modalities as input and predicts three tumor sub-regions:
 
 - `WT`: Whole Tumor
