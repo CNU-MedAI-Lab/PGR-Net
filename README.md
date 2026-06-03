@@ -87,8 +87,10 @@ The ROI prior in the current model is built for `160 x 160` images by default. T
 If you use the raw BraTS2023 NIfTI data, please refer to:
 
 ```bash
-python -m data_processing.cut_BraTS.
+python -m data_processing.cut_BraTS
 ```
+
+Then, use run/cal_roi2.py, run/check_data_multi_all.py, run/check_roi_23.py to get ROI counts map and **CORE roi_candidates.json** for PGR_Net.
 
 ## 🚀 Training
 
